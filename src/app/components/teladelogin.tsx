@@ -1,16 +1,14 @@
- interface TelaDeLoginProps {
-    link: string;
-    texto?: string;
- }
- 
- 
- const TelaDeLogin: React.FC<TelaDeLoginProps> = ({link, texto}) => {
+interface TelaDeLoginProps {
+  link: string;
+  texto?: string;
+}
+
+const TelaDeLogin: React.FC<TelaDeLoginProps> = ({ link, texto }) => {
   return (
     <>
-    <a href={link}>visitar site</a>
+      <button>entrar no site</button>
     </>
   );
+};
 
- }
-
-  export default TelaDeLogin;
+export default TelaDeLogin;
