@@ -1,18 +1,19 @@
+"use client";
+
+import { useState } from "react";
+import CardProfessor from "./components/cardProfessor";
+
 export default function Home() {
+  const [isLogged, setIsLogged] = useState(false);
+
   return (
-    <main className="text-black bg-gray-200 flex">
-      <img src="/fundo.png" alt="foto_de_fundo" className="w-1/2 h-screen" />
-      <section className="flex-col justify-center w-1/2 items-center flex p-32">
-        <h1 className="mb-20 text-3xl font-semibold">
-          Avaliação de professores
-        </h1>
-        <input className="p-2 m-3 rounded-lg w-full" type="text" placeholder="nome" />
-        <input className="p-2 m-3 rounded-lg w-full" type="text" placeholder="senha" />
-        <div className="flex flex-row">
-          <button className="p-2 m-3 bg-green-300 rounded-lg">entrar</button>
-          <button className="p-2 m-3 bg-green-300 rounded-lg">Criar conta</button>
-        </div>
-      </section>
+    <main className="bg-gray-200 h-screen">
+      <header className="bg-black mb-20 h-10"></header>
+      <CardProfessor
+        nome="Professora Alba"
+        curso="Sistemas Operacionais"
+        imgSrc="/lagartixa.png"
+      />
     </main>
   );
 }
